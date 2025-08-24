@@ -1,192 +1,383 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>청소맛집 - 전문 청소 서비스</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>청소맛집 — 입주·이사·사무실 전문 청소업체</title>
+  <meta name="description" content="청소맛집 | 입주청소 · 이사청소 · 사무실청소 · 부분/특수청소. 합리적인 가격, 확실한 사후관리. 지금 무료 견적 받기!" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:title" content="청소맛집 — 입주·이사·사무실 전문 청소업체" />
+  <meta property="og:description" content="합리적인 가격, 확실한 사후관리. 지금 무료 견적 받기!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://your-domain.kr" />
+  <meta property="og:image" content="https://your-domain.kr/og-image.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa',
+              500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a'
+            },
+            accent: { 500: '#10b981' }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CleaningService",
+    "name": "청소맛집",
+    "url": "https://your-domain.kr",
+    "telephone": "+82-10-0000-0000",
+    "areaServed": "서울·경기",
+    "address": {"@type": "PostalAddress","addressCountry": "KR","addressLocality": "서울","streetAddress": "(주소 입력)"},
+    "openingHours": ["Mo-Su 08:00-20:00"],
+    "priceRange": "₩₩",
+    "sameAs": ["https://www.instagram.com/yourbrand","https://pf.kakao.com/yourbrand"]
+  }
+  </script>
 </head>
-<body>
-    <!-- 헤더 -->
-    <header>
-        <div class="logo">
-            <h1>청소맛집</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#home">홈</a></li>
-                <li><a href="#services">서비스</a></li>
-                <li><a href="#reviews">고객 리뷰</a></li>
-                <li><a href="#gallery">갤러리</a></li>
-                <li><a href="#blog">블로그</a></li>
-                <li><a href="#reservation">예약</a></li>
-                <li><a href="#about">회사 소개</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
+<body class="text-gray-800">
+  <!-- Top Bar -->
+  <div class="bg-brand-900 text-white text-sm" data-aos="fade-down">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <p>서울·경기 전지역 / 오늘 문의하면 <span class="font-semibold">최대 10% 할인</span></p>
+      <a href="#contact" class="underline hover:no-underline">무료 견적 문의</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b" data-aos="fade-down" data-aos-delay="100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-brand-600"><path fill-rule="evenodd" d="M11.47 3.84a.75.75 0 0 1 1.06 0l7.63 7.63a.75.75 0 0 1-1.06 1.06l-.78-.78v6.8a1.75 1.75 0 0 1-1.75 1.75H7.53A1.75 1.75 0 0 1 5.78 18.55v-6.8l-.78.78a.75.75 0 1 1-1.06-1.06l7.53-7.53zM7.28 17.05v-6.4l4.72-4.72 4.72 4.72v6.4c0 .28-.22.5-.5.5H7.78a.5.5 0 0 1-.5-.5z" clip-rule="evenodd"/></svg>
+          <span class="font-extrabold text-lg">청소맛집</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 font-medium">
+          <a href="#services" class="hover:text-brand-600">서비스</a>
+          <a href="#pricing" class="hover:text-brand-600">가격</a>
+          <a href="#process" class="hover:text-brand-600">진행절차</a>
+          <a href="#reviews" class="hover:text-brand-600">후기</a>
+          <a href="#faq" class="hover:text-brand-600">FAQ</a>
         </nav>
-    </header>
+        <div class="hidden md:flex items-center gap-3">
+          <a href="tel:01000000000" class="px-3 py-2 rounded-lg border hover:bg-gray-50">전화문의</a>
+          <a href="#contact" class="px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700">무료 견적</a>
+        </div>
+        <button id="menuBtn" aria-label="메뉴 열기" class="md:hidden p-2 rounded-lg border">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="md:hidden hidden border-t">
+      <nav class="px-4 py-3 flex flex-col gap-3">
+        <a href="#services" class="py-2">서비스</a>
+        <a href="#pricing" class="py-2">가격</a>
+        <a href="#process" class="py-2">진행절차</a>
+        <a href="#reviews" class="py-2">후기</a>
+        <a href="#faq" class="py-2">FAQ</a>
+        <a href="#contact" class="py-2 font-semibold text-brand-700">무료 견적</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- 메인 배너 -->
-    <section id="home" class="banner">
-        <div class="banner-text">
-            <h2>청소맛집에서 청소를 맡기세요!</h2>
-            <p>믿을 수 있는 전문 청소 서비스, 청소맛집</p>
-            <a href="#reservation" class="cta-button">지금 예약하기</a>
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-50 to-white" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">청소는 <span class="text-brand-600">맛집</span>에 맡기세요.<br/>입주·이사·사무실 전문 <span class="whitespace-nowrap">청소업체</span></h1>
+        <p class="mt-5 text-lg text-gray-700">10년 경력의 전담팀, 친환경 세제 사용, 48시간 A/S 보증. 오늘 문의 시 방문 견적 무료!</p>
+        <div class="mt-8 flex items-center gap-3">
+          <a href="#contact" class="px-6 py-3 rounded-xl bg-brand-600 text-white font-semibold hover:bg-brand-700">무료 견적 받기</a>
+          <a href="tel:01000000000" class="px-6 py-3 rounded-xl border font-semibold hover:bg-gray-50">전화 010-0000-0000</a>
         </div>
-    </section>
+        <div class="mt-6 flex items-center gap-6 text-sm text-gray-600">
+          <div class="flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-full bg-accent-500"></span> 친환경 자재</div>
+          <div class="flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-full bg-accent-500"></span> 정찰제 요금</div>
+          <div class="flex items-center gap-2"><span class="inline-block w-2.5 h-2.5 rounded-full bg-accent-500"></span> 48시간 A/S</div>
+        </div>
+      </div>
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop" alt="전문 청소팀 작업 사진" class="rounded-2xl shadow-2xl"/>
+        <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow p-4 flex items-center gap-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="p-2 rounded-xl bg-brand-50"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-brand-600"><path d="M11.48 3.5a.75.75 0 0 1 1.04 0l7.5 7.5a.75.75 0 0 1-1.06 1.06l-.71-.71V19A2.75 2.75 0 0 1 15.5 21.75h-7A2.75 2.75 0 0 1 5.75 19v-7.65l-.71.71a.75.75 0 1 1-1.06-1.06l7.5-7.5z"/></svg></div>
+          <div>
+            <p class="font-semibold">입주청소 베스트</p>
+            <p class="text-sm text-gray-600">고객만족도 4.9/5.0</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- 서비스 섹션 -->
-    <section id="services" class="services">
-        <h2>우리의 서비스</h2>
-        <div class="service-item">
-            <h3>이사청소</h3>
-            <p>새로운 집으로 이사 가는 당신을 위한 완벽한 청소 서비스.</p>
+  <!-- Services -->
+  <section id="services" class="py-16" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">제공 서비스</h2>
+      <p class="mt-2 text-gray-600">입주, 이사, 사무실, 부분/특수청소까지 상황에 맞는 최적의 솔루션을 제공합니다.</p>
+      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl border hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="0">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2a9.99 9.99 0 0 0-7.07 2.93A9.99 9.99 0 1 0 12 2zm0 18.5A8.5 8.5 0 1 1 20.5 12 8.5 8.5 0 0 1 12 20.5z"/></svg>
+          </div>
+          <h3 class="font-bold text-xl">입주청소</h3>
+          <p class="mt-2 text-gray-600">새집의 먼지/유해물질 제거, 살균 소독, 환기 덕트/몰딩/샤시까지 세밀 관리.</p>
         </div>
-        <div class="service-item">
-            <h3>입주청소</h3>
-            <p>입주 전, 집을 깨끗하게 청소해드립니다.</p>
+        <div class="p-6 rounded-2xl border hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="100">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M3 6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3H3V6zm0 5h18v7a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-7z"/></svg>
+          </div>
+          <h3 class="font-bold text-xl">이사청소</h3>
+          <p class="mt-2 text-gray-600">기존 오염 제거 및 새 입주자를 위한 전면 클리닝. 주방/욕실 집중 케어.</p>
         </div>
-        <div class="service-item">
-            <h3>후 청소</h3>
-            <p>인테리어 후 또는 사고 후 청소 서비스를 제공합니다.</p>
+        <div class="p-6 rounded-2xl border hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="200">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M4 5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14l-4-3-4 3-4-3-4 3V5z"/></svg>
+          </div>
+          <h3 class="font-bold text-xl">사무실청소</h3>
+          <p class="mt-2 text-gray-600">정기/단기 클리닝, 바닥 왁스/카펫 세척, 공용공간 위생 관리.</p>
         </div>
-        <div class="service-item">
-            <h3>정기청소</h3>
-            <p>주기적으로 청소가 필요할 때, 맞춤형 정기 청소 서비스 제공.</p>
+        <div class="p-6 rounded-2xl border hover:shadow-lg transition" data-aos="fade-up" data-aos-delay="300">
+          <div class="w-12 h-12 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-2h2Zm0-4h-2V7h2Z"/></svg>
+          </div>
+          <h3 class="font-bold text-xl">부분/특수청소</h3>
+          <p class="mt-2 text-gray-600">줄눈/곰팡이, 입주전 소독, 바닥광택, 입주 전 환기청정 등 선택형 서비스.</p>
         </div>
-        <div class="service-item">
-            <h3>매트리스 홈케어</h3>
-            <p>매트리스 살균 및 청소, 건강한 수면을 위한 서비스.</p>
-        </div>
-        <div class="service-item">
-            <h3>공기청정기 필터 청소</h3>
-            <p>시스템 에어컨 및 공기청정기의 필터를 청소하여 쾌적한 환경을 만들어드립니다.</p>
-        </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- 고객 리뷰 -->
-    <section id="reviews" class="reviews">
-        <h2>고객 리뷰</h2>
-        <div class="review-item">
-            <p>"청소맛집 덕분에 새 집이 정말 깨끗해졌어요! 빠르고 깔끔한 서비스에 매우 만족합니다."</p>
-            <span>- 이진영 (서울)</span>
+  <!-- Pricing -->
+  <section id="pricing" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">가격 안내</h2>
+      <p class="mt-2 text-gray-600">평형/면적과 현장 상태에 따라 변동될 수 있습니다. 방문/사진 견적 가능.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border bg-white" data-aos="fade-up" data-aos-delay="0">
+          <h3 class="text-xl font-bold">원룸/오피스텔</h3>
+          <p class="mt-2 text-3xl font-extrabold">₩120,000~</p>
+          <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+            <li>주방/욕실 집중</li>
+            <li>창틀/샤시/몰딩</li>
+            <li>살균 소독 포함</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700">견적 문의</a>
         </div>
-        <div class="review-item">
-            <p>"매트리스 청소 서비스가 정말 좋았습니다. 살균 후 확실히 향도 좋고 깨끗해졌어요!"</p>
-            <span>- 김민지 (경기도)</span>
+        <div class="p-6 rounded-2xl border-2 border-brand-600 bg-white shadow-md" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-xl font-bold">아파트 (20~40평)</h3>
+          <p class="mt-2 text-3xl font-extrabold">₩250,000~</p>
+          <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+            <li>거실/방/베란다 풀케어</li>
+            <li>줄눈/곰팡이 옵션</li>
+            <li>48시간 A/S</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700">견적 문의</a>
         </div>
-        <div class="review-item">
-            <p>"이사 전후로 두 번이나 이용했는데, 항상 만족스럽습니다. 적극 추천합니다!"</p>
-            <span>- 박상현 (인천)</span>
+        <div class="p-6 rounded-2xl border bg-white" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="text-xl font-bold">사무실/상가</h3>
+          <p class="mt-2 text-3xl font-extrabold">견적 협의</p>
+          <ul class="mt-4 space-y-2 text-gray-700 list-disc list-inside">
+            <li>정기/단기 선택</li>
+            <li>바닥 왁스/카펫 세척</li>
+            <li>야간 작업 가능</li>
+          </ul>
+          <a href="#contact" class="mt-6 inline-block px-4 py-2 rounded-lg bg-brand-600 text-white hover:bg-brand-700">견적 문의</a>
         </div>
-    </section>
+      </div>
+      <p class="mt-6 text-sm text-gray-500">* 위 가격은 부가세 별도/현장 상태에 따라 변동</p>
+    </div>
+  </section>
 
-    <!-- 고객 포토 갤러리 -->
-    <section id="gallery" class="gallery">
-        <h2>고객 포토 갤러리</h2>
-        <div class="gallery-item">
-            <img src="photo1.jpg" alt="이사청소 후">
-            <p>이사청소 후</p>
+  <!-- Process -->
+  <section id="process" class="py-16" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">진행 절차</h2>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="p-6 rounded-2xl border" data-aos="fade-up" data-aos-delay="0">
+          <p class="text-4xl font-extrabold text-brand-600">01</p>
+          <h3 class="mt-2 font-bold">문의/상담</h3>
+          <p class="mt-2 text-gray-600">전화/카톡/양식으로 간편 문의</p>
         </div>
-        <div class="gallery-item">
-            <img src="photo2.jpg" alt="매트리스 홈케어">
-            <p>매트리스 홈케어</p>
+        <div class="p-6 rounded-2xl border" data-aos="fade-up" data-aos-delay="100">
+          <p class="text-4xl font-extrabold text-brand-600">02</p>
+          <h3 class="mt-2 font-bold">맞춤 견적</h3>
+          <p class="mt-2 text-gray-600">사진/방문으로 정확 견적</p>
         </div>
-        <div class="gallery-item">
-            <img src="photo3.jpg" alt="후 청소 작업">
-            <p>후 청소 작업</p>
+        <div class="p-6 rounded-2xl border" data-aos="fade-up" data-aos-delay="200">
+          <p class="text-4xl font-extrabold text-brand-600">03</p>
+          <h3 class="mt-2 font-bold">전문 시공</h3>
+          <p class="mt-2 text-gray-600">전담팀 투입, 친환경 세제</p>
         </div>
-    </section>
-
-    <!-- 블로그 섹션 -->
-    <section id="blog" class="blog">
-        <h2>청소맛집 블로그</h2>
-        <div class="blog-post">
-            <h3><a href="#">이사청소가 중요한 이유</a></h3>
-            <p>이사청소는 새 집으로 이사를 가기 전에 반드시 필요한 서비스입니다...</p>
-            <a href="#">더 보기</a>
+        <div class="p-6 rounded-2xl border" data-aos="fade-up" data-aos-delay="300">
+          <p class="text-4xl font-extrabold text-brand-600">04</p>
+          <h3 class="mt-2 font-bold">검수/사후관리</h3>
+          <p class="mt-2 text-gray-600">체크리스트 검수, 48시간 A/S</p>
         </div>
-        <div class="blog-post">
-            <h3><a href="#">매트리스 살균 청소의 중요성</a></h3>
-            <p>매트리스에서 자주 발생하는 오염물질을 청소하고 살균하는 방법을 알아보세요...</p>
-            <a href="#">더 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">고객 후기</h2>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="p-6 rounded-2xl border bg-white" data-aos="fade-up" data-aos-delay="0">
+          <blockquote class="text-gray-700">입주 전 날 정리하느라 걱정했는데, 구석구석 너무 깔끔해졌어요. 약속시간도 칼같이!</blockquote>
+          <figcaption class="mt-4 text-sm text-gray-500">— 김** / 송파구</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl border bg-white" data-aos="fade-up" data-aos-delay="100">
+          <blockquote class="text-gray-700">사무실 정기관리 맡겼는데 공기부터 달라요. 직원 만족도 상승!</blockquote>
+          <figcaption class="mt-4 text-sm text-gray-500">— 박** / 강남구</figcaption>
+        </figure>
+        <figure class="p-6 rounded-2xl border bg-white" data-aos="fade-up" data-aos-delay="200">
+          <blockquote class="text-gray-700">가격도 합리적이고 사후관리까지 확실했습니다. 재이용 의사 100%.</blockquote>
+          <figcaption class="mt-4 text-sm text-gray-500">— 이** / 분당</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">자주 묻는 질문</h2>
+      <div class="mt-8 divide-y rounded-2xl border">
+        <details class="group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold">소요 시간은 얼마나 걸리나요?<span class="ml-4 transition group-open:rotate-180">⌄</span></summary>
+          <p class="mt-3 text-gray-600">원룸 기준 2~3시간, 아파트 20~40평 4~6시간 정도 소요됩니다. 현장 상태에 따라 변동될 수 있습니다.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold">사용 세제는 안전한가요?<span class="ml-4 transition group-open:rotate-180">⌄</span></summary>
+          <p class="mt-3 text-gray-600">인증된 친환경 세제를 기본 사용하며, 필요한 경우 전문 약품을 안전수칙에 따라 사용합니다.</p>
+        </details>
+        <details class="group p-6">
+          <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold">A/S는 어떻게 진행되나요?<span class="ml-4 transition group-open:rotate-180">⌄</span></summary>
+          <p class="mt-3 text-gray-600">작업 완료 후 48시간 이내 동일 하자 발생 시 무상으로 재방문하여 조치합니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-brand-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold">무료 견적 문의</h2>
+          <p class="mt-2 text-gray-700">아래 양식 또는 전화/카톡으로 빠르게 상담받으세요.</p>
+          <ul class="mt-6 space-y-2 text-gray-700">
+            <li>📞 전화: <a class="text-brand-700 font-semibold" href="tel:01000000000">010-0000-0000</a></li>
+            <li>💬 카카오톡: <a class="text-brand-700 font-semibold" href="https://pf.kakao.com/_yourid">@청소맛집</a></li>
+            <li>✉️ 이메일: <a class="text-brand-700 font-semibold" href="mailto:hello@your-domain.kr">hello@your-domain.kr</a></li>
+          </ul>
         </div>
-        <div class="blog-post">
-            <h3><a href="#">정기 청소 서비스의 이점</a></h3>
-            <p>정기적으로 청소를 받으면 집안의 청결도를 유지할 수 있습니다...</p>
-            <a href="#">더 보기</a>
-        </div>
-    </section>
-
-    <!-- 예약 폼 -->
-    <section id="reservation" class="reservation">
-        <h2>예약하기</h2>
-        <p>온라인으로 간편하게 예약하세요!</p>
-        <form action="#" method="POST">
-            <label for="name">이름</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="phone">전화번호</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="service">서비스 선택</label>
-            <select id="service" name="service">
-                <option value="이사청소">이사청소</option>
-                <option value="입주청소">입주청소</option>
-                <option value="후청소">후청소</option>
-                <option value="정기청소">정기청소</option>
-            </select>
-
-            <label for="date">원하는 날짜</label>
-            <input type="date" id="date" name="date" required>
-
-            <button type="submit">예약하기</button>
+        <form class="p-6 rounded-2xl bg-white border" name="contact-form" netlify data-netlify="true">
+          <input type="hidden" name="form-name" value="contact-form" />
+          <label class="block">
+            <span class="text-sm font-medium">성함</span>
+            <input required name="name" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="홍길동" />
+          </label>
+          <label class="block mt-4">
+            <span class="text-sm font-medium">연락처</span>
+            <input required name="phone" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="010-0000-0000" />
+          </label>
+          <label class="block mt-4">
+            <span class="text-sm font-medium">주소(동/읍/면)</span>
+            <input name="address" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="예: 송파구 문정동" />
+          </label>
+          <label class="block mt-4">
+            <span class="text-sm font-medium">요청 사항</span>
+            <textarea name="message" rows="4" class="mt-1 w-full rounded-lg border px-3 py-2" placeholder="평수, 상태, 희망 일정 등"></textarea>
+          </label>
+          <button type="submit" class="mt-6 w-full px-4 py-3 rounded-lg bg-brand-600 text-white font-semibold hover:bg-brand-700">보내기</button>
+          <p class="mt-2 text-xs text-gray-500">제출 시 담당자가 확인 후 회신드립니다.</p>
         </form>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- FAQ 섹션 -->
-    <section id="faq" class="faq">
-        <h2>자주 묻는 질문</h2>
-        <div class="faq-item">
-            <h3>청소 서비스는 어떤 방식으로 진행되나요?</h3>
-            <p>저희는 고객님과 사전 상담 후, 맞춤형 청소 계획을 수립하여 청소를 진행합니다.</p>
+  <!-- CTA -->
+  <section class="py-16" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="rounded-2xl bg-gradient-to-r from-brand-600 to-brand-800 text-white p-10 flex flex-col md:flex-row items-center justify-between gap-6" data-aos="zoom-in">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-extrabold">오늘 문의하면 방문 견적 무료!</h3>
+          <p class="mt-2 text-white/90">지금 바로 청소맛집과 상의하세요. 최적의 솔루션을 제안드립니다.</p>
         </div>
-        <div class="faq-item">
-            <h3>청소 후 어떤 관리가 필요하나요?</h3>
-            <p>청소 후에는 기본적으로 공기정화와 환기가 필요합니다. 이후, 정기적인 청소를 권장합니다.</p>
+        <div class="flex gap-3">
+          <a href="#contact" class="px-6 py-3 rounded-xl bg-white text-brand-700 font-semibold">무료 견적</a>
+          <a href="tel:01000000000" class="px-6 py-3 rounded-xl border border-white font-semibold">전화하기</a>
         </div>
-        <div class="faq-item">
-            <h3>예약은 어떻게 하나요?</h3>
-            <p>온라인 예약 폼을 통해 간편하게 예약할 수 있습니다. 혹은 전화로도 예약이 가능합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6 text-brand-400"><path fill-rule="evenodd" d="M11.47 3.84a.75.75 0 0 1 1.06 0l7.63 7.63a.75.75 0 0 1-1.06 1.06l-.78-.78v6.8a1.75 1.75 0 0 1-1.75 1.75H7.53A1.75 1.75 0 0 1 5.78 18.55v-6.8l-.78.78a.75.75 0 1 1-1.06-1.06l7.53-7.53zM7.28 17.05v-6.4l4.72-4.72 4.72 4.72v6.4c0 .28-.22.5-.5.5H7.78a.5.5 0 0 1-.5-.5z" clip-rule="evenodd"/></svg>
+          <span class="font-extrabold">청소맛집</span>
         </div>
-    </section>
+        <p class="mt-3 text-sm text-gray-400">입주·이사·사무실 전문 청소업체</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">고객센터</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>전화: 010-0000-0000</li>
+          <li>이메일: hello@your-domain.kr</li>
+          <li>카카오톡: @청소맛집</li>
+          <li>영업시간: 08:00 ~ 20:00</li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold">서비스 지역</h4>
+        <p class="mt-3 text-sm">서울 · 경기(성남, 분당, 수원, 일산 등)</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">바로가기</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="#services" class="hover:text-white">서비스</a></li>
+          <li><a href="#pricing" class="hover:text-white">가격</a></li>
+          <li><a href="#reviews" class="hover:text-white">후기</a></li>
+          <li><a href="#contact" class="hover:text-white">문의</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 py-6 text-xs text-gray-500 flex flex-col md:flex-row items-center justify-between gap-2">
+        <p>© <span id="year"></span> 청소맛집. All rights reserved.</p>
+        <p>사업자등록번호: 000-00-00000 | 대표: 홍길동 | 주소: 서울시 (주소)</p>
+      </div>
+    </div>
+  </footer>
 
-    <!-- 회사 소개 -->
-    <section id="about" class="about">
-        <h2>청소맛집 소개</h2>
-        <p>청소맛집은 고객의 건강과 만족을 최우선으로 생각하는 청소 전문 업체입니다. 이사청소, 입주청소, 후청소 등을 비롯하여 다양한 서비스를 제공하며, 최신 장비와 기술로 청소의 품질을 보장합니다.</p>
-    </section>
-
-    <!-- 연락처 -->
-    <section id="contact" class="contact">
-        <h2>연락처</h2>
-        <p>전화: 1234-5678</p>
-        <p>이메일: contact@cheongsomatjib.com</p>
-        <p>주소: 서울시 강남구 청소맛집로 123</p>
-        <p><a href="https://www.google.com/maps" target="_blank">지도 보기</a></p>
-    </section>
-
-    <!-- 푸터 -->
-    <footer>
-        <div class="social-media">
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
-            <a href="https://www.naver.com" target="_blank">Naver Blog</a>
-        </div>
-        <p>&copy; 2025 청소맛집. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, easing: 'ease-out', once: true, offset: 80 });
+    // 현재 연도 표시
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // 모바일 메뉴 토글
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+  </script>
 </body>
 </html>
